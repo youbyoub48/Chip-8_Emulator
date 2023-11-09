@@ -167,109 +167,109 @@ void Chip8::interpreterOpcode(Uint16 opcode){
     action = recupererAction(opcode);
 
     switch(action){
-        case 0:
+        case 0: //0NNN
             break;
 
-        case 1:
+        case 1: //00E0
             break;
         
-        case 2:
+        case 2: //00EE
             break;
         
-        case 3:
+        case 3: //1NNN
             break;
         
-        case 4:
+        case 4: //2NNN
             break;
         
-        case 5:
+        case 5: //3XNN
             break;
         
-        case 6:
+        case 6: //4XNN
             break;
 
-        case 7:
+        case 7: //5XY0
             break;
         
-        case 8:
+        case 8: //6XNN
             break;
         
-        case 9:
+        case 9: //7XNN
             break;
         
-        case 10:
+        case 10: //8XY0
             break;
         
-        case 11:
+        case 11: //8XY1
             break;
         
-        case 12:
+        case 12: //8XY2
             break;
         
-        case 13:
+        case 13: //8XY3
             break;
         
-        case 14:
+        case 14: //8XY4
             break;
         
-        case 15:
+        case 15: //8XY5
             break;
         
-        case 16:
+        case 16: //8XY6
             break;
 
-        case 17:
+        case 17: //8XY7
             break;
 
-        case 18:
+        case 18: //8XYE
             break;
 
-        case 19:
+        case 19: //9XY0
             break;
 
-        case 20:
+        case 20: //ANNN
             break;
 
-        case 21:
+        case 21: //BNNN
             break;
 
-        case 22:
+        case 22: //CXNN
             break;
 
-        case 23:
+        case 23: //DXYN
             break;
 
-        case 24:
+        case 24: //EX9E
             break;
         
-        case 25:
+        case 25: //EXA1
             break;
         
-        case 26:
+        case 26: //FX07
             break;
         
-        case 27:
+        case 27: //FX0A
             break;
         
-        case 28:
+        case 28: //FX15
             break;
         
-        case 29:
+        case 29: //FX18
             break;
 
-        case 30:
+        case 30: //FX1E
             break;
 
-        case 31:
+        case 31: //FX29
             break;
 
-        case 32:
+        case 32: //FX33
             break;
 
-        case 33:
+        case 33: //FX55
             break;
         
-        case 34:
+        case 34: //FX65
             break;
     }
 }
