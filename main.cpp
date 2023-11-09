@@ -11,12 +11,18 @@ int main(int argc, char* argv[])
     chip8.initialiserEcran();
     chip8.initialiserPixel();
 
-    chip8.updateEcran();
+    bool continuer=true; 
+
+    do 
+    {   
+        chip8.updateEcran() ; 
+        SDL_Delay(FPS);
+    }while(continuer); 
 
     pause();
 
 
-    return EXIT_SUCCESS;
+    return 0;
 }
 
 
@@ -34,7 +40,7 @@ void initialiserSDL()
 void pause()
 {
 
-    Uint8 continuer = 1;
+    bool continuer = true;
     SDL_Event event;
 
     do
@@ -44,13 +50,13 @@ void pause()
         switch (event.type)
         {
         case SDL_QUIT:
-            continuer = 0;
+            continuer = false;
             break;
         case SDL_KEYDOWN:
-            continuer = 0;
+            continuer = false;
             break;
         default: break;
         }
-    } while (continuer == 1);
+    } while (continuer);
 
 }

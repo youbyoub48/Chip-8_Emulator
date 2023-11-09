@@ -13,6 +13,9 @@
 #define DIMPIXEL 8
 #define WIDTH   l*DIMPIXEL
 #define HEIGHT  L*DIMPIXEL
+#define VITESSECPU 4
+#define FPS 16
+#define NBROPCODE 35 
 
 struct PIXEL
 {
@@ -20,6 +23,12 @@ struct PIXEL
     Uint8 couleur;
 };
 
+struct OPCODE
+{ 
+    Uint16 masque [NBROPCODE]; 
+    Uint16 id[NBROPCODE];
+
+}; 
 
 class Chip8{
     private:
@@ -34,6 +43,7 @@ class Chip8{
         PIXEL ecran[l][L];
         SDL_Window* pWindow{ nullptr };
         SDL_Renderer* pRenderer{ nullptr };
+        OPCODE opcode;
     public:
         Chip8();
         ~Chip8();
@@ -43,6 +53,9 @@ class Chip8{
         void dessinerPixel(PIXEL pixel);
         void effacerEcran();
         void updateEcran();
+        Uint16 recupererOpcode();
+        Uint8 recupererAction(Uint16);
+        void interpreterOpcode(Uint16); 
 };
 
 #endif
