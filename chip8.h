@@ -55,7 +55,8 @@ class Chip8{
         void updateEcran();
         Uint16 recupererOpcode();
         Uint8 recupererAction(Uint16);
-        void interpreterOpcode(Uint16); 
+        void interpreterOpcode(Uint16);
+        void dessinerEcran(Uint8 b1,Uint8 b2, Uint8 b3);
 };
 
 #endif
